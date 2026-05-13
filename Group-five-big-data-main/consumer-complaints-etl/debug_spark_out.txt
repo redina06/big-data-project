@@ -1,0 +1,29 @@
+The system cannot find the path specified.
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 1:===========>                                               (1 + 4) / 5]                                                                                [Stage 6:>                                                          (0 + 1) / 1]                                                                                Spark initialized 4.1.1
+CSV schema:
+root
+ |-- Complaint ID: integer (nullable = true)
+ |-- Submitted via: string (nullable = true)
+ |-- Date submitted: date (nullable = true)
+ |-- Date received: date (nullable = true)
+ |-- State: string (nullable = true)
+ |-- Product: string (nullable = true)
+ |-- Sub-product: string (nullable = true)
+ |-- Issue: string (nullable = true)
+ |-- Sub-issue: string (nullable = true)
+ |-- Company public response: string (nullable = true)
+ |-- Company response to consumer: string (nullable = true)
+ |-- Timely response?: string (nullable = true)
+
+CSV count 62516
+JSON loaded
+Parquet loaded
+SUCCESS: The process with PID 14568 (child process of PID 10192) has been terminated.
+SUCCESS: The process with PID 10192 (child process of PID 8808) has been terminated.
+SUCCESS: The process with PID 8808 (child process of PID 7412) has been terminated.

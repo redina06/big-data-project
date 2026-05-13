@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue May 12 22:47:59 EAT 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019e-1dbb-5f04-00000e7525e8 
+on database directory C:\Users\Hybrid Technology\Documents\3 year second semester\big data project\Group-five-big-data-main\consumer-complaints-etl\metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@266474c2 
+Loaded from file:/C:/Users/Hybrid%20Technology/Downloads/spark-4.1.1-bin-hadoop3/spark-4.1.1-bin-hadoop3/jars/derby-10.16.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.12+8-LTS-286
+user.dir=C:\Users\Hybrid Technology\Documents\3 year second semester\big data project\Group-five-big-data-main\consumer-complaints-etl
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

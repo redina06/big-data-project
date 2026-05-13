@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Consumer Complaints Spark Dashboard</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #38bdf8;
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  p.sub {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 30px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .card {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .card h2 {
+    font-size: 32px;
+    color: #38bdf8;
+    margin: 0;
+  }
+  .card p {
+    color: #94a3b8;
+    margin: 5px 0 0;
+    font-size: 14px;
+  }
+  .chart-box {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .chart-box h3 {
+    color: #38bdf8;
+    margin: 0 0 15px;
+    font-size: 16px;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+  .bar-label {
+    width: 50px;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: right;
+  }
+  .bar-track {
+    flex: 1;
+    background: #0f172a;
+    border-radius: 4px;
+    height: 22px;
+  }
+  .bar-fill {
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 11px;
+    color: white;
+    min-width: 40px;
+  }
+  .table-box {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .table-box h3 {
+    color: #38bdf8;
+    margin: 0 0 15px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 10px;
+    text-align: left;
+  }
+  td {
+    padding: 9px 10px;
+    border-bottom: 1px solid #334155;
+    color: #cbd5e1;
+  }
+  tr:hover td {
+    background: #273449;
+  }
+  .badge {
+    background: #1d4ed8;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+  }
+  .spark-info {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .spark-info h3 {
+    color: #38bdf8;
+    margin: 0 0 10px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Consumer Complaints Spark Dashboard</h1>
+<p class="sub">US Consumer Financial Complaints by State — Powered by Apache Spark</p>
+
+<div class="spark-info">
+  <h3>Spark Information</h3>
+  <p>Spark Version: 4.1.1 | Master: local[*] | App Name: Consumer_Complaints_Spark_Dashboard</p>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <h2>62,516</h2>
+    <p>Total Complaints</p>
+  </div>
+  <div class="card">
+    <h2>51</h2>
+    <p>States Covered</p>
+  </div>
+  <div class="card">
+    <h2>CA</h2>
+    <p>Most Complaints (13,709)</p>
+  </div>
+</div>
+
+<div class="chart-box">
+  <h3>Top 10 States by Total Complaints</h3>
+  
+    <div class="bar-row">
+      <span class="bar-label">CA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:100%;background:#3b82f6">13,709</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">FL</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:47%;background:#3b82f6">6,488</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">TX</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:34%;background:#3b82f6">4,686</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">NY</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:32%;background:#3b82f6">4,442</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">GA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:21%;background:#3b82f6">2,921</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">NJ</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:19%;background:#3b82f6">2,664</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">IL</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:16%;background:#3b82f6">2,270</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">MA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:15%;background:#3b82f6">2,141</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">MD</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:14%;background:#3b82f6">1,959</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">VA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:12%;background:#3b82f6">1,731</div>
+      </div>
+    </div>
+</div>
+
+<div class="table-box">
+  <h3>Full Data Table — All States</h3>
+  <table>
+    <tr>
+      <th>#</th>
+      <th>State</th>
+      <th>Complaints</th>
+    </tr>
+    <tr>
+      <td><span class="badge">1</span></td>
+      <td><b>CA</b></td>
+      <td>13,709</td>
+    </tr><tr>
+      <td><span class="badge">2</span></td>
+      <td><b>FL</b></td>
+      <td>6,488</td>
+    </tr><tr>
+      <td><span class="badge">3</span></td>
+      <td><b>TX</b></td>
+      <td>4,686</td>
+    </tr><tr>
+      <td><span class="badge">4</span></td>
+      <td><b>NY</b></td>
+      <td>4,442</td>
+    </tr><tr>
+      <td><span class="badge">5</span></td>
+      <td><b>GA</b></td>
+      <td>2,921</td>
+    </tr><tr>
+      <td><span class="badge">6</span></td>
+      <td><b>NJ</b></td>
+      <td>2,664</td>
+    </tr><tr>
+      <td><span class="badge">7</span></td>
+      <td><b>IL</b></td>
+      <td>2,270</td>
+    </tr><tr>
+      <td><span class="badge">8</span></td>
+      <td><b>MA</b></td>
+      <td>2,141</td>
+    </tr><tr>
+      <td><span class="badge">9</span></td>
+      <td><b>MD</b></td>
+      <td>1,959</td>
+    </tr><tr>
+      <td><span class="badge">10</span></td>
+      <td><b>VA</b></td>
+      <td>1,731</td>
+    </tr><tr>
+      <td><span class="badge">11</span></td>
+      <td><b>NC</b></td>
+      <td>1,717</td>
+    </tr><tr>
+      <td><span class="badge">12</span></td>
+      <td><b>PA</b></td>
+      <td>1,676</td>
+    </tr><tr>
+      <td><span class="badge">13</span></td>
+      <td><b>WA</b></td>
+      <td>1,530</td>
+    </tr><tr>
+      <td><span class="badge">14</span></td>
+      <td><b>AZ</b></td>
+      <td>1,516</td>
+    </tr><tr>
+      <td><span class="badge">15</span></td>
+      <td><b>MI</b></td>
+      <td>1,395</td>
+    </tr><tr>
+      <td><span class="badge">16</span></td>
+      <td><b>NV</b></td>
+      <td>1,221</td>
+    </tr><tr>
+      <td><span class="badge">17</span></td>
+      <td><b>CT</b></td>
+      <td>1,097</td>
+    </tr><tr>
+      <td><span class="badge">18</span></td>
+      <td><b>SC</b></td>
+      <td>822</td>
+    </tr><tr>
+      <td><span class="badge">19</span></td>
+      <td><b>TN</b></td>
+      <td>758</td>
+    </tr><tr>
+      <td><span class="badge">20</span></td>
+      <td><b>OH</b></td>
+      <td>731</td>
+    </tr><tr>
+      <td><span class="badge">21</span></td>
+      <td><b>MO</b></td>
+      <td>674</td>
+    </tr><tr>
+      <td><span class="badge">22</span></td>
+      <td><b>OR</b></td>
+      <td>620</td>
+    </tr><tr>
+      <td><span class="badge">23</span></td>
+      <td><b>CO</b></td>
+      <td>576</td>
+    </tr><tr>
+      <td><span class="badge">24</span></td>
+      <td><b>MN</b></td>
+      <td>382</td>
+    </tr><tr>
+      <td><span class="badge">25</span></td>
+      <td><b>DC</b></td>
+      <td>353</td>
+    </tr><tr>
+      <td><span class="badge">26</span></td>
+      <td><b>IN</b></td>
+      <td>316</td>
+    </tr><tr>
+      <td><span class="badge">27</span></td>
+      <td><b>KS</b></td>
+      <td>311</td>
+    </tr><tr>
+      <td><span class="badge">28</span></td>
+      <td><b>OK</b></td>
+      <td>293</td>
+    </tr><tr>
+      <td><span class="badge">29</span></td>
+      <td><b>WI</b></td>
+      <td>291</td>
+    </tr><tr>
+      <td><span class="badge">30</span></td>
+      <td><b>AL</b></td>
+      <td>269</td>
+    </tr><tr>
+      <td><span class="badge">31</span></td>
+      <td><b>DE</b></td>
+      <td>268</td>
+    </tr><tr>
+      <td><span class="badge">32</span></td>
+      <td><b>AR</b></td>
+      <td>266</td>
+    </tr><tr>
+      <td><span class="badge">33</span></td>
+      <td><b>RI</b></td>
+      <td>249</td>
+    </tr><tr>
+      <td><span class="badge">34</span></td>
+      <td><b>LA</b></td>
+      <td>246</td>
+    </tr><tr>
+      <td><span class="badge">35</span></td>
+      <td><b>NM</b></td>
+      <td>219</td>
+    </tr><tr>
+      <td><span class="badge">36</span></td>
+      <td><b>UT</b></td>
+      <td>201</td>
+    </tr><tr>
+      <td><span class="badge">37</span></td>
+      <td><b>NH</b></td>
+      <td>199</td>
+    </tr><tr>
+      <td><span class="badge">38</span></td>
+      <td><b>KY</b></td>
+      <td>157</td>
+    </tr><tr>
+      <td><span class="badge">39</span></td>
+      <td><b>IA</b></td>
+      <td>154</td>
+    </tr><tr>
+      <td><span class="badge">40</span></td>
+      <td><b>ME</b></td>
+      <td>152</td>
+    </tr><tr>
+      <td><span class="badge">41</span></td>
+      <td><b>MS</b></td>
+      <td>141</td>
+    </tr><tr>
+      <td><span class="badge">42</span></td>
+      <td><b>ID</b></td>
+      <td>122</td>
+    </tr><tr>
+      <td><span class="badge">43</span></td>
+      <td><b>HI</b></td>
+      <td>111</td>
+    </tr><tr>
+      <td><span class="badge">44</span></td>
+      <td><b>AK</b></td>
+      <td>110</td>
+    </tr><tr>
+      <td><span class="badge">45</span></td>
+      <td><b>NE</b></td>
+      <td>83</td>
+    </tr><tr>
+      <td><span class="badge">46</span></td>
+      <td><b>WV</b></td>
+      <td>77</td>
+    </tr><tr>
+      <td><span class="badge">47</span></td>
+      <td><b>MT</b></td>
+      <td>70</td>
+    </tr><tr>
+      <td><span class="badge">48</span></td>
+      <td><b>VT</b></td>
+      <td>54</td>
+    </tr><tr>
+      <td><span class="badge">49</span></td>
+      <td><b>SD</b></td>
+      <td>34</td>
+    </tr><tr>
+      <td><span class="badge">50</span></td>
+      <td><b>WY</b></td>
+      <td>22</td>
+    </tr><tr>
+      <td><span class="badge">51</span></td>
+      <td><b>ND</b></td>
+      <td>22</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

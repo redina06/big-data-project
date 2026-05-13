@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Consumer Complaints Dashboard</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #38bdf8;
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  p.sub {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 30px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .card {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .card h2 {
+    font-size: 32px;
+    color: #38bdf8;
+    margin: 0;
+  }
+  .card p {
+    color: #94a3b8;
+    margin: 5px 0 0;
+    font-size: 14px;
+  }
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .chart-box {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .chart-box h3 {
+    color: #38bdf8;
+    margin: 0 0 15px;
+    font-size: 16px;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+  .bar-label {
+    width: 30px;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: right;
+  }
+  .bar-track {
+    flex: 1;
+    background: #0f172a;
+    border-radius: 4px;
+    height: 22px;
+  }
+  .bar-fill {
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 11px;
+    color: white;
+    min-width: 40px;
+  }
+  .table-box {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .table-box h3 {
+    color: #38bdf8;
+    margin: 0 0 15px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 10px;
+    text-align: left;
+  }
+  td {
+    padding: 9px 10px;
+    border-bottom: 1px solid #334155;
+    color: #cbd5e1;
+  }
+  tr:hover td {
+    background: #273449;
+  }
+  .badge {
+    background: #1d4ed8;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Consumer Complaints Dashboard</h1>
+<p class="sub">US Consumer Financial Complaints by State — 51 States Analyzed</p>
+
+<div class="cards">
+  <div class="card">
+    <h2>62,516</h2>
+    <p>Total Complaints</p>
+  </div>
+  <div class="card">
+    <h2>51</h2>
+    <p>States Covered</p>
+  </div>
+  <div class="card">
+    <h2>CA</h2>
+    <p>Most Complaints (13,709)</p>
+  </div>
+  <div class="card">
+    <h2>DC</h2>
+    <p>Highest Per Capita</p>
+  </div>
+</div>
+
+<div class="charts">
+  <div class="chart-box">
+    <h3>Top 10 States by Total Complaints</h3>
+    
+    <div class="bar-row">
+      <span class="bar-label">CA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:100%;background:#3b82f6">13,709</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">FL</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:47%;background:#3b82f6">6,488</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">TX</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:34%;background:#3b82f6">4,686</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">NY</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:32%;background:#3b82f6">4,442</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">GA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:21%;background:#3b82f6">2,921</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">NJ</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:19%;background:#3b82f6">2,664</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">IL</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:16%;background:#3b82f6">2,270</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">MA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:15%;background:#3b82f6">2,141</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">MD</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:14%;background:#3b82f6">1,959</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">VA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:12%;background:#3b82f6">1,731</div>
+      </div>
+    </div>
+  </div>
+  <div class="chart-box">
+    <h3>Top 10 States by Complaints Per Capita</h3>
+    
+    <div class="bar-row">
+      <span class="bar-label">DC</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:100%;background:#8b5cf6">0.0005</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">NV</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:80%;background:#8b5cf6">0.0004</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">CA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:65%;background:#8b5cf6">0.0004</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">MD</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:61%;background:#8b5cf6">0.0003</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">FL</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:60%;background:#8b5cf6">0.0003</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">MA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:59%;background:#8b5cf6">0.0003</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">CT</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:56%;background:#8b5cf6">0.0003</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">NJ</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:55%;background:#8b5cf6">0.0003</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">GA</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:53%;background:#8b5cf6">0.0003</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">DE</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:53%;background:#8b5cf6">0.0003</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="table-box">
+  <h3>Full Data Table — All 51 States</h3>
+  <table>
+    <tr>
+      <th>#</th>
+      <th>State</th>
+      <th>Full Name</th>
+      <th>Complaints</th>
+      <th>Population</th>
+      <th>Per Capita</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+    <tr>
+      <td><span class="badge">1</span></td>
+      <td><b>CA</b></td>
+      <td>California</td>
+      <td>13,709</td>
+      <td>38,802,500</td>
+      <td>0.000353</td>
+      <td>36.778261</td>
+      <td>-119.417932</td>
+    </tr><tr>
+      <td><span class="badge">2</span></td>
+      <td><b>FL</b></td>
+      <td>Florida</td>
+      <td>6,488</td>
+      <td>19,893,297</td>
+      <td>0.000326</td>
+      <td>27.664827</td>
+      <td>-81.515754</td>
+    </tr><tr>
+      <td><span class="badge">3</span></td>
+      <td><b>TX</b></td>
+      <td>Texas</td>
+      <td>4,686</td>
+      <td>26,956,958</td>
+      <td>0.000174</td>
+      <td>31.968599</td>
+      <td>-99.901813</td>
+    </tr><tr>
+      <td><span class="badge">4</span></td>
+      <td><b>NY</b></td>
+      <td>New York</td>
+      <td>4,442</td>
+      <td>19,746,227</td>
+      <td>0.000225</td>
+      <td>43.299428</td>
+      <td>-74.217933</td>
+    </tr><tr>
+      <td><span class="badge">5</span></td>
+      <td><b>GA</b></td>
+      <td>Georgia</td>
+      <td>2,921</td>
+      <td>10,097,343</td>
+      <td>0.000289</td>
+      <td>32.157435</td>
+      <td>-82.907123</td>
+    </tr><tr>
+      <td><span class="badge">6</span></td>
+      <td><b>NJ</b></td>
+      <td>New Jersey</td>
+      <td>2,664</td>
+      <td>8,938,175</td>
+      <td>0.000298</td>
+      <td>40.058324</td>
+      <td>-74.405661</td>
+    </tr><tr>
+      <td><span class="badge">7</span></td>
+      <td><b>IL</b></td>
+      <td>Illinois</td>
+      <td>2,270</td>
+      <td>12,880,580</td>
+      <td>0.000176</td>
+      <td>40.633125</td>
+      <td>-89.398528</td>
+    </tr><tr>
+      <td><span class="badge">8</span></td>
+      <td><b>MA</b></td>
+      <td>Massachusetts</td>
+      <td>2,141</td>
+      <td>6,745,408</td>
+      <td>0.000317</td>
+      <td>42.407211</td>
+      <td>-71.382437</td>
+    </tr><tr>
+      <td><span class="badge">9</span></td>
+      <td><b>MD</b></td>
+      <td>Maryland</td>
+      <td>1,959</td>
+      <td>5,976,407</td>
+      <td>0.000328</td>
+      <td>39.045755</td>
+      <td>-76.641271</td>
+    </tr><tr>
+      <td><span class="badge">10</span></td>
+      <td><b>VA</b></td>
+      <td>Virginia</td>
+      <td>1,731</td>
+      <td>8,326,289</td>
+      <td>0.000208</td>
+      <td>37.431573</td>
+      <td>-78.656894</td>
+    </tr><tr>
+      <td><span class="badge">11</span></td>
+      <td><b>NC</b></td>
+      <td>North Carolina</td>
+      <td>1,717</td>
+      <td>9,943,964</td>
+      <td>0.000173</td>
+      <td>35.759573</td>
+      <td>-79.0193</td>
+    </tr><tr>
+      <td><span class="badge">12</span></td>
+      <td><b>PA</b></td>
+      <td>Pennsylvania</td>
+      <td>1,676</td>
+      <td>12,787,209</td>
+      <td>0.000131</td>
+      <td>41.203322</td>
+      <td>-77.194525</td>
+    </tr><tr>
+      <td><span class="badge">13</span></td>
+      <td><b>WA</b></td>
+      <td>Washington</td>
+      <td>1,530</td>
+      <td>7,061,530</td>
+      <td>0.000217</td>
+      <td>47.751074</td>
+      <td>-120.740139</td>
+    </tr><tr>
+      <td><span class="badge">14</span></td>
+      <td><b>AZ</b></td>
+      <td>Arizona</td>
+      <td>1,516</td>
+      <td>6,731,484</td>
+      <td>0.000225</td>
+      <td>34.048928</td>
+      <td>-111.093731</td>
+    </tr><tr>
+      <td><span class="badge">15</span></td>
+      <td><b>MI</b></td>
+      <td>Michigan</td>
+      <td>1,395</td>
+      <td>9,909,877</td>
+      <td>0.000141</td>
+      <td>44.314844</td>
+      <td>-85.602364</td>
+    </tr><tr>
+      <td><span class="badge">16</span></td>
+      <td><b>NV</b></td>
+      <td>Nevada</td>
+      <td>1,221</td>
+      <td>2,839,099</td>
+      <td>0.000430</td>
+      <td>38.80261</td>
+      <td>-116.419389</td>
+    </tr><tr>
+      <td><span class="badge">17</span></td>
+      <td><b>CT</b></td>
+      <td>Connecticut</td>
+      <td>1,097</td>
+      <td>3,596,677</td>
+      <td>0.000305</td>
+      <td>41.603221</td>
+      <td>-73.087749</td>
+    </tr><tr>
+      <td><span class="badge">18</span></td>
+      <td><b>SC</b></td>
+      <td>South Carolina</td>
+      <td>822</td>
+      <td>4,832,482</td>
+      <td>0.000170</td>
+      <td>33.836081</td>
+      <td>-81.163725</td>
+    </tr><tr>
+      <td><span class="badge">19</span></td>
+      <td><b>TN</b></td>
+      <td>Tennessee</td>
+      <td>758</td>
+      <td>6,549,352</td>
+      <td>0.000116</td>
+      <td>35.517491</td>
+      <td>-86.580447</td>
+    </tr><tr>
+      <td><span class="badge">20</span></td>
+      <td><b>OH</b></td>
+      <td>Ohio</td>
+      <td>731</td>
+      <td>11,594,163</td>
+      <td>0.000063</td>
+      <td>40.417287</td>
+      <td>-82.907123</td>
+    </tr><tr>
+      <td><span class="badge">21</span></td>
+      <td><b>MO</b></td>
+      <td>Missouri</td>
+      <td>674</td>
+      <td>6,063,589</td>
+      <td>0.000111</td>
+      <td>37.964253</td>
+      <td>-91.831833</td>
+    </tr><tr>
+      <td><span class="badge">22</span></td>
+      <td><b>OR</b></td>
+      <td>Oregon</td>
+      <td>620</td>
+      <td>3,970,239</td>
+      <td>0.000156</td>
+      <td>43.804133</td>
+      <td>-120.554201</td>
+    </tr><tr>
+      <td><span class="badge">23</span></td>
+      <td><b>CO</b></td>
+      <td>Colorado</td>
+      <td>576</td>
+      <td>5,355,866</td>
+      <td>0.000108</td>
+      <td>39.550051</td>
+      <td>-105.782067</td>
+    </tr><tr>
+      <td><span class="badge">24</span></td>
+      <td><b>MN</b></td>
+      <td>Minnesota</td>
+      <td>382</td>
+      <td>5,457,173</td>
+      <td>0.000070</td>
+      <td>46.729553</td>
+      <td>-94.6859</td>
+    </tr><tr>
+      <td><span class="badge">25</span></td>
+      <td><b>DC</b></td>
+      <td>District of Columbia</td>
+      <td>353</td>
+      <td>658,893</td>
+      <td>0.000536</td>
+      <td>38.942142</td>
+      <td>-77.025955</td>
+    </tr><tr>
+      <td><span class="badge">26</span></td>
+      <td><b>IN</b></td>
+      <td>Indiana</td>
+      <td>316</td>
+      <td>6,596,855</td>
+      <td>0.000048</td>
+      <td>40.551217</td>
+      <td>-85.602364</td>
+    </tr><tr>
+      <td><span class="badge">27</span></td>
+      <td><b>KS</b></td>
+      <td>Kansas</td>
+      <td>311</td>
+      <td>2,904,021</td>
+      <td>0.000107</td>
+      <td>39.011902</td>
+      <td>-98.484246</td>
+    </tr><tr>
+      <td><span class="badge">28</span></td>
+      <td><b>OK</b></td>
+      <td>Oklahoma</td>
+      <td>293</td>
+      <td>3,878,051</td>
+      <td>0.000076</td>
+      <td>35.007752</td>
+      <td>-97.092877</td>
+    </tr><tr>
+      <td><span class="badge">29</span></td>
+      <td><b>WI</b></td>
+      <td>Wisconsin</td>
+      <td>291</td>
+      <td>5,757,564</td>
+      <td>0.000051</td>
+      <td>43.78444</td>
+      <td>-88.787868</td>
+    </tr><tr>
+      <td><span class="badge">30</span></td>
+      <td><b>AL</b></td>
+      <td>Alabama</td>
+      <td>269</td>
+      <td>4,849,377</td>
+      <td>0.000055</td>
+      <td>32.318231</td>
+      <td>-86.902298</td>
+    </tr><tr>
+      <td><span class="badge">31</span></td>
+      <td><b>DE</b></td>
+      <td>Delaware</td>
+      <td>268</td>
+      <td>935,614</td>
+      <td>0.000286</td>
+      <td>38.910832</td>
+      <td>-75.52767</td>
+    </tr><tr>
+      <td><span class="badge">32</span></td>
+      <td><b>AR</b></td>
+      <td>Arkansas</td>
+      <td>266</td>
+      <td>2,966,369</td>
+      <td>0.000090</td>
+      <td>35.20105</td>
+      <td>-91.831833</td>
+    </tr><tr>
+      <td><span class="badge">33</span></td>
+      <td><b>RI</b></td>
+      <td>Rhode Island</td>
+      <td>249</td>
+      <td>1,055,173</td>
+      <td>0.000236</td>
+      <td>41.580095</td>
+      <td>-71.477429</td>
+    </tr><tr>
+      <td><span class="badge">34</span></td>
+      <td><b>LA</b></td>
+      <td>Louisiana</td>
+      <td>246</td>
+      <td>4,649,676</td>
+      <td>0.000053</td>
+      <td>31.244823</td>
+      <td>-92.145024</td>
+    </tr><tr>
+      <td><span class="badge">35</span></td>
+      <td><b>NM</b></td>
+      <td>New Mexico</td>
+      <td>219</td>
+      <td>2,085,572</td>
+      <td>0.000105</td>
+      <td>34.97273</td>
+      <td>-105.032363</td>
+    </tr><tr>
+      <td><span class="badge">36</span></td>
+      <td><b>UT</b></td>
+      <td>Utah</td>
+      <td>201</td>
+      <td>2,942,902</td>
+      <td>0.000068</td>
+      <td>39.32098</td>
+      <td>-111.093731</td>
+    </tr><tr>
+      <td><span class="badge">37</span></td>
+      <td><b>NH</b></td>
+      <td>New Hampshire</td>
+      <td>199</td>
+      <td>1,326,813</td>
+      <td>0.000150</td>
+      <td>43.193852</td>
+      <td>-71.572395</td>
+    </tr><tr>
+      <td><span class="badge">38</span></td>
+      <td><b>KY</b></td>
+      <td>Kentucky</td>
+      <td>157</td>
+      <td>4,413,457</td>
+      <td>0.000036</td>
+      <td>37.839333</td>
+      <td>-84.270018</td>
+    </tr><tr>
+      <td><span class="badge">39</span></td>
+      <td><b>IA</b></td>
+      <td>Iowa</td>
+      <td>154</td>
+      <td>3,107,126</td>
+      <td>0.000050</td>
+      <td>41.878003</td>
+      <td>-93.097702</td>
+    </tr><tr>
+      <td><span class="badge">40</span></td>
+      <td><b>ME</b></td>
+      <td>Maine</td>
+      <td>152</td>
+      <td>1,330,089</td>
+      <td>0.000114</td>
+      <td>45.253783</td>
+      <td>-69.445469</td>
+    </tr><tr>
+      <td><span class="badge">41</span></td>
+      <td><b>MS</b></td>
+      <td>Mississippi</td>
+      <td>141</td>
+      <td>2,994,079</td>
+      <td>0.000047</td>
+      <td>32.354668</td>
+      <td>-89.398528</td>
+    </tr><tr>
+      <td><span class="badge">42</span></td>
+      <td><b>ID</b></td>
+      <td>Idaho</td>
+      <td>122</td>
+      <td>1,634,464</td>
+      <td>0.000075</td>
+      <td>44.068202</td>
+      <td>-114.742041</td>
+    </tr><tr>
+      <td><span class="badge">43</span></td>
+      <td><b>HI</b></td>
+      <td>Hawaii</td>
+      <td>111</td>
+      <td>1,419,561</td>
+      <td>0.000078</td>
+      <td>19.898682</td>
+      <td>-155.665857</td>
+    </tr><tr>
+      <td><span class="badge">44</span></td>
+      <td><b>AK</b></td>
+      <td>Alaska</td>
+      <td>110</td>
+      <td>736,732</td>
+      <td>0.000149</td>
+      <td>63.588753</td>
+      <td>-154.493062</td>
+    </tr><tr>
+      <td><span class="badge">45</span></td>
+      <td><b>NE</b></td>
+      <td>Nebraska</td>
+      <td>83</td>
+      <td>1,881,503</td>
+      <td>0.000044</td>
+      <td>41.492537</td>
+      <td>-99.901813</td>
+    </tr><tr>
+      <td><span class="badge">46</span></td>
+      <td><b>WV</b></td>
+      <td>West Virginia</td>
+      <td>77</td>
+      <td>1,850,326</td>
+      <td>0.000042</td>
+      <td>38.597626</td>
+      <td>-80.454903</td>
+    </tr><tr>
+      <td><span class="badge">47</span></td>
+      <td><b>MT</b></td>
+      <td>Montana</td>
+      <td>70</td>
+      <td>1,023,579</td>
+      <td>0.000068</td>
+      <td>46.879682</td>
+      <td>-110.362566</td>
+    </tr><tr>
+      <td><span class="badge">48</span></td>
+      <td><b>VT</b></td>
+      <td>Vermont</td>
+      <td>54</td>
+      <td>626,562</td>
+      <td>0.000086</td>
+      <td>44.558803</td>
+      <td>-72.577841</td>
+    </tr><tr>
+      <td><span class="badge">49</span></td>
+      <td><b>SD</b></td>
+      <td>South Dakota</td>
+      <td>34</td>
+      <td>853,175</td>
+      <td>0.000040</td>
+      <td>43.969515</td>
+      <td>-99.901813</td>
+    </tr><tr>
+      <td><span class="badge">50</span></td>
+      <td><b>ND</b></td>
+      <td>North Dakota</td>
+      <td>22</td>
+      <td>739,482</td>
+      <td>0.000030</td>
+      <td>47.551493</td>
+      <td>-101.002012</td>
+    </tr><tr>
+      <td><span class="badge">51</span></td>
+      <td><b>WY</b></td>
+      <td>Wyoming</td>
+      <td>22</td>
+      <td>584,153</td>
+      <td>0.000038</td>
+      <td>43.075968</td>
+      <td>-107.290284</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

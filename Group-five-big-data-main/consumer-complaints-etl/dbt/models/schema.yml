@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: consumer
+    tables:
+      - name: consumer_insights
+        description: "Staged consumer complaints analytics table loaded into DuckDB"
+
+models:
+  - name: consumer_insights
+    description: "Final dbt model for consumer complaints analytics"
+    columns:
+      - name: state_abbrv
+        description: "State abbreviation"
+        tests:
+          - unique
+          - not_null
+      - name: state_name
+        description: "State name"
+      - name: complaints_count
+        description: "Total complaint count per state"
+        tests:
+          - not_null
+      - name: pop_2014
+        description: "2014 population estimate per state"
+      - name: complaints_per_capita
+        description: "Complaint volume normalized by population"
+        tests:
+          - not_null
+
+  - name: top_states
+    description: "Top 10 states by complaints per capita"
+    columns:
+      - name: state_abbrv
+        description: "State abbreviation"
+        tests:
+          - unique
+          - not_null

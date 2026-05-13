@@ -1,0 +1,8 @@
+name: "consumer_complaints_etl"
+version: "1.0"
+config-version: 2
+profile: "consumer_complaints_duckdb"
+model-paths: ["models"]
+seed-paths: ["seeds"]
+target-path: "target"
+clean-targets: ["target"]

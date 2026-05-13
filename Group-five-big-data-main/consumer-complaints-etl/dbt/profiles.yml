@@ -1,0 +1,8 @@
+consumer_complaints_duckdb:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../output/consumer_analytics.duckdb
+      threads: 1
+      extensions: []

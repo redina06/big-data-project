@@ -1,0 +1,206 @@
+{
+  "AL": {
+    "state": "Alabama",
+    "pop_2014": 4849377
+  },
+  "AK": {
+    "state": "Alaska",
+    "pop_2014": 736732
+  },
+  "AZ": {
+    "state": "Arizona",
+    "pop_2014": 6731484
+  },
+  "AR": {
+    "state": "Arkansas",
+    "pop_2014": 2966369
+  },
+  "CA": {
+    "state": "California",
+    "pop_2014": 38802500
+  },
+  "CO": {
+    "state": "Colorado",
+    "pop_2014": 5355866
+  },
+  "CT": {
+    "state": "Connecticut",
+    "pop_2014": 3596677
+  },
+  "DE": {
+    "state": "Delaware",
+    "pop_2014": 935614
+  },
+  "DC": {
+    "state": "District of Columbia",
+    "pop_2014": 658893
+  },
+  "FL": {
+    "state": "Florida",
+    "pop_2014": 19893297
+  },
+  "GA": {
+    "state": "Georgia",
+    "pop_2014": 10097343
+  },
+  "HI": {
+    "state": "Hawaii",
+    "pop_2014": 1419561
+  },
+  "ID": {
+    "state": "Idaho",
+    "pop_2014": 1634464
+  },
+  "IL": {
+    "state": "Illinois",
+    "pop_2014": 12880580
+  },
+  "IN": {
+    "state": "Indiana",
+    "pop_2014": 6596855
+  },
+  "IA": {
+    "state": "Iowa",
+    "pop_2014": 3107126
+  },
+  "KS": {
+    "state": "Kansas",
+    "pop_2014": 2904021
+  },
+  "KY": {
+    "state": "Kentucky",
+    "pop_2014": 4413457
+  },
+  "LA": {
+    "state": "Louisiana",
+    "pop_2014": 4649676
+  },
+  "ME": {
+    "state": "Maine",
+    "pop_2014": 1330089
+  },
+  "MD": {
+    "state": "Maryland",
+    "pop_2014": 5976407
+  },
+  "MA": {
+    "state": "Massachusetts",
+    "pop_2014": 6745408
+  },
+  "MI": {
+    "state": "Michigan",
+    "pop_2014": 9909877
+  },
+  "MN": {
+    "state": "Minnesota",
+    "pop_2014": 5457173
+  },
+  "MS": {
+    "state": "Mississippi",
+    "pop_2014": 2994079
+  },
+  "MO": {
+    "state": "Missouri",
+    "pop_2014": 6063589
+  },
+  "MT": {
+    "state": "Montana",
+    "pop_2014": 1023579
+  },
+  "NE": {
+    "state": "Nebraska",
+    "pop_2014": 1881503
+  },
+  "NV": {
+    "state": "Nevada",
+    "pop_2014": 2839099
+  },
+  "NH": {
+    "state": "New Hampshire",
+    "pop_2014": 1326813
+  },
+  "NJ": {
+    "state": "New Jersey",
+    "pop_2014": 8938175
+  },
+  "NM": {
+    "state": "New Mexico",
+    "pop_2014": 2085572
+  },
+  "NY": {
+    "state": "New York",
+    "pop_2014": 19746227
+  },
+  "NC": {
+    "state": "North Carolina",
+    "pop_2014": 9943964
+  },
+  "ND": {
+    "state": "North Dakota",
+    "pop_2014": 739482
+  },
+  "OH": {
+    "state": "Ohio",
+    "pop_2014": 11594163
+  },
+  "OK": {
+    "state": "Oklahoma",
+    "pop_2014": 3878051
+  },
+  "OR": {
+    "state": "Oregon",
+    "pop_2014": 3970239
+  },
+  "PA": {
+    "state": "Pennsylvania",
+    "pop_2014": 12787209
+  },
+  "RI": {
+    "state": "Rhode Island",
+    "pop_2014": 1055173
+  },
+  "SC": {
+    "state": "South Carolina",
+    "pop_2014": 4832482
+  },
+  "SD": {
+    "state": "South Dakota",
+    "pop_2014": 853175
+  },
+  "TN": {
+    "state": "Tennessee",
+    "pop_2014": 6549352
+  },
+  "TX": {
+    "state": "Texas",
+    "pop_2014": 26956958
+  },
+  "UT": {
+    "state": "Utah",
+    "pop_2014": 2942902
+  },
+  "VT": {
+    "state": "Vermont",
+    "pop_2014": 626562
+  },
+  "VA": {
+    "state": "Virginia",
+    "pop_2014": 8326289
+  },
+  "WA": {
+    "state": "Washington",
+    "pop_2014": 7061530
+  },
+  "WV": {
+    "state": "West Virginia",
+    "pop_2014": 1850326
+  },
+  "WI": {
+    "state": "Wisconsin",
+    "pop_2014": 5757564
+  },
+  "WY": {
+    "state": "Wyoming",
+    "pop_2014": 584153
+  }
+}

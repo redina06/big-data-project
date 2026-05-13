@@ -1,0 +1,7 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\Hybrid Technology\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black"
+}
